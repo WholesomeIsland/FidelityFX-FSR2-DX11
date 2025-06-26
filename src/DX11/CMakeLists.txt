@@ -43,7 +43,7 @@ copyTargetCommand("${FSR2_Sample_DX11_SHADERS}" ${CMAKE_HOME_DIRECTORY}/bin/Shad
 copyTargetCommand("${FSR2_Sample_DX11_CONFIG}" ${CMAKE_RUNTIME_OUTPUT_DIRECTORY} dx11_sample_config)
 
 add_executable(FSR2_Sample_DX11 WIN32 ${FSR2_Sample_DX11_SOURCES} ${FSR2_Sample_DX11_SHADERS})
-target_link_libraries(FSR2_Sample_DX11 PUBLIC comctl32 Usp10 NJSON amd_lib_minimal amd_sdk_minimal d3dcompiler D3D11 ffx_fsr2_api_x64 ffx_fsr2_api_dx11_x64)
+target_link_libraries(FSR2_Sample_DX11 PUBLIC dxguid comctl32 Usp10 amd_lib_minimal amd_sdk_minimal d3dcompiler D3D11 ffx_fsr2_api_x64 ffx_fsr2_api_dx11_x64)
 set_target_properties(FSR2_Sample_DX11 PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_HOME_DIRECTORY}/bin" DEBUG_POSTFIX "d")
 target_compile_definitions(FSR2_Sample_DX11 PRIVATE _UNICODE UNICODE)
 add_dependencies(FSR2_Sample_DX11 dx11_sample_shaders dx11_sample_config)

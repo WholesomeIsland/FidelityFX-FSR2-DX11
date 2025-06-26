@@ -26,7 +26,7 @@
 #include "DXUTsettingsdlg.h"
 #include "SDKmisc.h"
 
-#include "json.h"
+#include "../../libs/cauldron/libs/json/json.h"
 
 // AMD includes
 #include "AMD_LIB.h"
